@@ -1,5 +1,9 @@
-# utils/validators.py
+# main.py
 
-def validate_age(age):
-    if age < 0:
-        raise ValueError("Invalid Age")
+from utils.validators import validate_age
+
+try:
+    age = int(input("Enter age: "))
+    validate_age(age)
+except ValueError as e:
+    print("Error:", e)
